@@ -15,6 +15,8 @@ return {
                 "c",
                 "cpp",
                 "python",
+                "t32",
+                "cmake",
             },
 
             highlight = {
