@@ -1,7 +1,7 @@
 -- Basic editor settings
 vim.opt.number = true
 vim.opt.mouse = "a"
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.signcolumn = "yes"        -- keep gutter stable for gitsigns/diagnostics
 vim.opt.scrolloff = 8
 

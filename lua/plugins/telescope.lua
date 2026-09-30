@@ -14,7 +14,7 @@ return {
                     previewer = false,
                 },           
                 live_grep = {
-                    previewer = false,
+                    previewer = true,
                 },
             }
         })
