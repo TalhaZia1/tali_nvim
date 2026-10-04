@@ -9,6 +9,7 @@ vim.opt.scrolloff = 8
 vim.opt.keymodel = "startsel,stopsel"
 vim.opt.selection = "inclusive"
 vim.opt.virtualedit = "block"
+vim.opt.clipboard = "unnamedplus"
 
 -- Behavior
 vim.opt.undofile = true           -- undo survives closing the file
