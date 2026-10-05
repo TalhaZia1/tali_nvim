@@ -29,38 +29,3 @@ vim.opt.smartcase = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Statusline
-local modes = {
-    n = "NORMAL", i = "INSERT", v = "VISUAL", V = "V-LINE",
-    ["\22"] = "V-BLOCK", c = "COMMAND", R = "REPLACE", t = "TERMINAL",
-    s = "SELECT", S = "S-LINE", ["\19"] = "S-BLOCK",
-}
-
-function _G.stl_mode()
-    local m = vim.fn.mode():sub(1, 1)
-    return modes[m] or m
-end
-
-function _G.stl_git()
-    local head = vim.b.gitsigns_head
-    return head and ("  ⎇ " .. head) or ""
-end
-
-function _G.stl_diag()
-    local c = vim.diagnostic.count(0)
-    local e = c[vim.diagnostic.severity.ERROR] or 0
-    local w = c[vim.diagnostic.severity.WARN] or 0
-    local out = ""
-    if e > 0 then out = out .. " E:" .. e end
-    if w > 0 then out = out .. " W:" .. w end
-    return out
-end
-
-vim.opt.statusline = table.concat({
-    " %{v:lua.stl_mode()} ",
-    " %f %m%r",
-    "%{v:lua.stl_git()}",
-    "%=",
-    "%{v:lua.stl_diag()}",
-    "  %y [%{&fileformat}]  %l:%c  %p%% ",
-})
