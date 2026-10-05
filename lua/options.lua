@@ -7,8 +7,8 @@ vim.opt.scrolloff = 8
 
 -- Windows-style selection
 vim.opt.keymodel = "startsel,stopsel"
-vim.opt.selection = "inclusive"
-vim.opt.virtualedit = "block"
+vim.opt.selection = "exclusive"
+vim.opt.virtualedit = "block,onemore"
 vim.opt.clipboard = "unnamedplus"
 
 -- Behavior

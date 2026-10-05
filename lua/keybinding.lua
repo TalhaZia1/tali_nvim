@@ -22,26 +22,5 @@ vim.keymap.set({ "n", "x" },      "<PageUp>",     "<C-y>",          { silent = t
 vim.keymap.set({ "n", "x" },      "<C-PageDown>", "<C-d>",          { silent = true })
 vim.keymap.set({ "n", "x" },      "<C-PageUp>",   "<C-u>",          { silent = true })
 
--- select all (all modes)
-vim.keymap.set("n",               "<C-a>", "ggVG",                  { silent = true })
-vim.keymap.set("x",               "<C-a>", "<Esc>ggVG",             { silent = true })
-vim.keymap.set("i",               "<C-a>", "<Esc>ggVG",             { silent = true })
+vim.keymap.set("c", "<C-v>",      "<C-r>+",                         { silent = true })
 
--- copy / cut (visual)
-vim.keymap.set("x",               "<C-c>", '"+y',                   { silent = true })
-vim.keymap.set("x",               "<C-x>", '"+d',                   { silent = true })
-
--- paste
-vim.keymap.set("n",               "<C-v>", '"+p',                   { silent = true })
-vim.keymap.set("x",               "<C-v>", '"+P',                   { silent = true })
-vim.keymap.set("i",               "<C-v>", "<C-r><C-o>+",           { silent = true })
-vim.keymap.set("c",               "<C-v>", "<C-r>+",                { silent = true })
-
--- save
-vim.keymap.set("n",               "<C-s>", "<cmd>w<CR>",            { silent = true })
-
--- restore what got replaced
-vim.keymap.set("n",               "<C-q>", "<C-v>",                 { silent = true, desc = "Visual block" })
-vim.keymap.set("i",               "<C-q>", "<C-v>",                 { silent = true, desc = "Insert literal char" })
-vim.keymap.set("n",               "+",     "<C-a>",                 { silent = true, desc = "Increment number" })
-vim.keymap.set("n",               "-",     "<C-x>",                 { silent = true, desc = "Decrement number" })
