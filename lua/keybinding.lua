@@ -27,3 +27,15 @@ vim.keymap.set("c", "<C-v>",      "<C-r>+",                         { silent = t
 vim.keymap.set("n", "<F12>",      vim.lsp.buf.definition,           { silent = true })
 vim.keymap.set("n", "<A-F12>",    vim.lsp.buf.references,           { silent = true })
 
+vim.keymap.set("n", "<S-f>",      "#",                              { silent = true })
+
+vim.keymap.set("n", "<A-f>", function()
+    local word = vim.fn.expand("<cword>")
+
+    require("telescope.builtin").live_grep({
+        default_text = word,
+    })
+end, {
+    desc = "Global search word",
+})
+

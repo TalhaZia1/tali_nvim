@@ -17,6 +17,7 @@ return {
                 "python",
                 "t32",
                 "cmake",
+                "asm",
             },
 
             highlight = {
