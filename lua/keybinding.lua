@@ -24,3 +24,6 @@ vim.keymap.set({ "n", "x" },      "<C-PageUp>",   "<C-u>",          { silent = t
 
 vim.keymap.set("c", "<C-v>",      "<C-r>+",                         { silent = true })
 
+vim.keymap.set("n", "<F12>",      vim.lsp.buf.definition,           { silent = true })
+vim.keymap.set("n", "<A-F12>",    vim.lsp.buf.references,           { silent = true })
+

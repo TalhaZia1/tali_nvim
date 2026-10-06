@@ -19,6 +19,13 @@ return {
                     "diagnostics",
                 },
 
+                lualine_c = {
+                    {
+                        "filename",
+                        path = 1,
+                    },
+                },
+
                 lualine_x = {
                     "encoding",
                     "fileformat",
@@ -28,3 +35,4 @@ return {
         })
     end,
 }
+

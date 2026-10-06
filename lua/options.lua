@@ -1,7 +1,7 @@
 -- Basic editor settings
 vim.opt.number = true
 vim.opt.mouse = "a"
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"        -- keep gutter stable for gitsigns/diagnostics
 vim.opt.scrolloff = 8
 
@@ -28,4 +28,7 @@ vim.opt.smartcase = true
 -- Splits
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- lua/options.lua
+vim.opt.termguicolors = true
 
