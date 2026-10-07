@@ -35,6 +35,16 @@ return {
         vim.keymap.set("n", "<A-p>", "<cmd>Telescope live_grep<CR>", {
             desc = "Search entire project",
         })
+
+        vim.keymap.set("n", "<A-f>", function()
+            local word = vim.fn.expand("<cword>")
+
+            require("telescope.builtin").live_grep({
+                default_text = word,
+            })
+        end, {
+            desc = "Search current word",
+        })
     end,
 }
 
