@@ -49,36 +49,16 @@ return {
                             local result = {}
 
                             for _, buf in ipairs(bufferline()) do
-                                local icon = " "
+                                local name = buf.name
 
                                 if buf.current then
-                                    icon = "● "
+                                    name = name .. " ●"
                                 end
 
-                                table.insert(
-                                    result,
-                                    icon .. buf.name .. " ×"
-                                )
+                                table.insert(result, name)
                             end
 
                             return table.concat(result, " │ ")
-                        end,
-
-                        on_click = function(number, button, modifiers)
-                            if button ~= "l" then
-                                return
-                            end
-
-                            local buffers = bufferline()
-
-                            -- Determine which buffer was clicked
-                            local index = number
-
-                            if buffers[index] then
-                                vim.api.nvim_set_current_buf(
-                                    buffers[index].bufnr
-                                )
-                            end
                         end,
                     },
                 },
@@ -89,9 +69,11 @@ return {
                 lualine_y = {},
                 lualine_z = {},
             },
+
             -- =========================
             -- BOTTOM STATUSLINE
             -- =========================
+
             sections = {
                 lualine_b = {
                     {
@@ -120,4 +102,3 @@ return {
         })
     end,
 }
-
