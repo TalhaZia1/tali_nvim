@@ -11,6 +11,12 @@ vim.opt.selection = "exclusive"
 vim.opt.virtualedit = "block,onemore"
 vim.opt.clipboard = "unnamedplus"
 
+-- Folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldenable = true
+
 -- Behavior
 vim.opt.undofile = true           -- undo survives closing the file
 vim.opt.updatetime = 250          -- faster gitsigns/diagnostic updates
