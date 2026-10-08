@@ -12,6 +12,11 @@ return {
             pickers = {
                 find_files = {
                     previewer = false,
+
+                    layout_config = {
+                        width = 0.75,
+                        height = 0.50,
+                    },
                 },
 
                 live_grep = {
@@ -20,8 +25,8 @@ return {
                     layout_strategy = "horizontal",
 
                     layout_config = {
-                        width = 0.95,
-                        height = 0.88,
+                        width = 0.99,
+                        height = 0.75,
                         preview_width = 0.55,
                     },
                 },
