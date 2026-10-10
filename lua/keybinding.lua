@@ -6,7 +6,8 @@ vim.keymap.set("n", "<C-d>",      "yyp",                            { silent = t
 
 -- Buffers / Windows
 vim.keymap.set("n", "<A-Left>",   "<C-w>q",                         { silent = true }) -- quit window 
-vim.keymap.set("n", "<S-Tab>",    "<cmd>bnext<CR>",                 { silent = true }) -- toggle bufferline
+vim.keymap.set("n", "<S-Tab>",    "<cmd>bn<CR>",                    { silent = true }) -- toggle bufferline
+vim.keymap.set("n", "U",          "<cmd>bp<CR>",                    { silent = true }) -- toggle bufferline
 vim.keymap.set("n", "Q",          "<cmd>bd<CR>",                    { silent = true }) -- delete buffer
 
 -- Diffview
