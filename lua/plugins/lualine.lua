@@ -52,7 +52,7 @@ return {
                                 local name = buf.name
 
                                 if buf.current then
-                                    name = name .. " ●"
+                                    name = "● " .. name
                                 end
 
                                 table.insert(result, name)
