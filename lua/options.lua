@@ -40,7 +40,7 @@ vim.opt.termguicolors = true
 
 -- Fixing Borders
 vim.opt.winborder = "rounded"
-vim.api.nvim_set_hl(0, "FloatBorder",          { fg = "#1B2D42", bold = false, })
-vim.api.nvim_set_hl(0, "WinSeparator",         { fg = "#1B2D42", bold = false, })
-vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = "#1B2D42", bold = false, })
+vim.api.nvim_set_hl(0, "FloatBorder",          { fg = "#00BFCB", bold = true, })
+vim.api.nvim_set_hl(0, "WinSeparator",         { fg = "#00BFCB", bold = true, })
+vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = "#00BFCB", bold = true, })
 

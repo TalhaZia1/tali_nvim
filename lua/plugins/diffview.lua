@@ -23,6 +23,8 @@ return {
                 listing_style = "tree",
             },
         })
+        vim.api.nvim_set_hl(0, "DiffAdd",    { bg = "#003D26" })
+        vim.api.nvim_set_hl(0, "DiffDelete", { bg = "#520D2B" })
     end,
 }
 
