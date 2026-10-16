@@ -45,21 +45,30 @@ return {
             tabline = {
                 lualine_a = {
                     {
-                        function()
-                            local result = {}
+                        "buffers",
 
-                            for _, buf in ipairs(bufferline()) do
-                                local name = buf.name
+                        -- Show only the filename
+                        show_filename_only = true,
 
-                                if buf.current then
-                                    name = "● " .. name
-                                end
-
-                                table.insert(result, name)
+                        -- Click to select a buffer
+                        on_click = function(number, button, modifiers)
+                            if button == "l" then
+                                vim.api.nvim_set_current_buf(number)
                             end
-
-                            return table.concat(result, " │ ")
                         end,
+
+                        -- Buffer appearance
+                        buffers_color = {
+                            active = "lualine_a_normal",
+                            inactive = "lualine_a_inactive",
+                        },
+
+                        -- Buffer symbols
+                        symbols = {
+                            modified = "",
+                            alternate_file = "",
+                            directory = "",
+                        },
                     },
                 },
 
